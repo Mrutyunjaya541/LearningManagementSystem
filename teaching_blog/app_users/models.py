@@ -31,6 +31,8 @@ class UserProfileInfo(models.Model):
 
     def __str__(self):
         return self.user.username
+    class Meta:
+        verbose_name_plural = "UserProfileInfo"
 
 class Contact(models.Model):
     name = models.CharField(max_length=150)
@@ -42,3 +44,5 @@ class Contact(models.Model):
 
     def get_absolute_url(self):
         return reverse('index')
+    class Meta:
+        verbose_name_plural = "Contact"
