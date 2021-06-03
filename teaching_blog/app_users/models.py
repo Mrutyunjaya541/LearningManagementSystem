@@ -46,3 +46,6 @@ class Contact(models.Model):
         return reverse('index')
     class Meta:
         verbose_name_plural = "Contact"
+
+
+#Enter

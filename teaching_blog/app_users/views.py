@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from app_users.forms import UserForm, UserProfileInfoForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse

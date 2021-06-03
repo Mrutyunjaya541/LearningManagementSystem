@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 import os
 
-# Create your models here.
+
 class Standard(models.Model):
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(null=True, blank=True)
@@ -81,7 +81,7 @@ class Lesson(models.Model):
 class WorkingDays(models.Model):
     standard = models.ForeignKey(Standard, on_delete=models.CASCADE,related_name='standard_days')
     day = models.CharField(max_length=100)
-    def __str__(self):
+    def __repr__(self):
         return self.day
 
 class TimeSlots(models.Model):
